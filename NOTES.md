@@ -16,4 +16,23 @@ Enums in Spring Boot
 Hibernate Association Annotations
 - **@oneToMany** - 1 row in the current table is mapped to multiple rows in the specified table
     - **@manyToOne** is simply the vice versa
-- **IMPORTANT NOTE:** Used to ABSTRACT away SQL queries & database complexities
+- **NOTE:** Used to ABSTRACT away SQL queries & database complexities
+- **NOTE:** When connecting related/referenced data, use the referenced record's **PRIMARY KEY**
+
+Spring JPA Implementation
+- We will create a Repository through an **Interface** for EACH Table
+    - Interface will EXTEND *JpaRepository* and specify the TYPE of *Record* & *Primary Key* being stored
+- **NOTE:** Allows us to MAP a Java Class --> a Database Table
+- Read Query Method names follow the STRUCTURE of: *findBy<field name>*
+
+
+**IMPORTANT NOTE:** **Hibernate** is a *JPA Implementation*
+- Go to **localhost/<port>/h2-console** to directly work with the H2 Database
+
+ResponseEntity
+- Represents the ENTIRE **HTTP Response** of an API call
+    - Status Code
+    - Body
+    - Header
+- Often used to *configure* the Response to return only specific information
+

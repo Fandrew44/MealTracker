@@ -17,8 +17,4 @@ public class Category {
     private Long id;
     //Breakfast, Lunch, or Dinner
     private String name;
-
-    @ManyToOne(cascade = CascadeType.PERSIST)
-    private User user;
-
 }
