@@ -55,4 +55,10 @@ public class CategoryController {
         Category result = categoryRepository.save(category);
         return ResponseEntity.ok().body(result);
     }
+
+    @DeleteMapping("/category/{id}")
+    ResponseEntity<Category> deleteCategoryById(@PathVariable Long id) {
+        categoryRepository.deleteById(id);
+        return ResponseEntity.ok().build();
+    }
 }
