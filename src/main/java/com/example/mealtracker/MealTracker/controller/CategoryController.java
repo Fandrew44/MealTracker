@@ -49,9 +49,10 @@ public class CategoryController {
         return ResponseEntity.created(new URI("/api/category" + result.getId())).body(result);
     }
 
-    @PutMapping("/category/{id}")
+    @PutMapping("/category")
     ResponseEntity<Category> updateCategoryById(@Validated @RequestBody Category category) {
         // JPA automatically understands to update a pre-existing record if Method is PUT
+        // - determines which record to update based on PRIMARY KEY (I THINK)
         Category result = categoryRepository.save(category);
         return ResponseEntity.ok().body(result);
     }

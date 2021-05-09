@@ -36,3 +36,12 @@ ResponseEntity
     - Header
 - Often used to *configure* the Response to return only specific information
 
+H2
+- An open source **RDMS** for Java
+- By default, JPA/Hibernate uses an *in-memory* H2 Database whose data is stored in **volatile memory**
+    - All data stored will be LOST when the application TERMINATES
+    
+**NOTE:** An **in-memory database** is one where all data is stored in **main memory** (*RAM*)
+    - Very fast & useful for testing the application
+
+**NOTE:** A *normal database* is one where all data is...FINISH
