@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Category() {
     //STATES
     const [isLoading, setIsLoading] = useState(true);
     const [categories, setCategories] = useState([]);
-
 
     async function loadCategories() {
         const response = await fetch('/api/categories');
@@ -13,7 +12,12 @@ function Category() {
         setIsLoading(false);  
     }
 
-    loadCategories();
+    //useEffect is a React Hook to be used for side-effects executed in the Render LIFECYCLE
+    // - An alternative to "componentDidMount()" for Functional Components
+    // - By adding no State argument, the body will be executed upon rendering the Component
+    useEffect(() => {
+        loadCategories();
+    })
 
     if (isLoading) {
         return(
