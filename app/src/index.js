@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Category from './Category';
+import Category from './components/Category';
+import Menu from './components/Menu';
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Category />
+    <Menu />
   </React.StrictMode>,
   document.getElementById('root')
 );

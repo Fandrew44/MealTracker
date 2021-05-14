@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
 
 function Category() {
     //STATES
@@ -22,7 +23,7 @@ function Category() {
     if (isLoading) {
         return(
             <div>
-                <h1>Loading...</h1>
+                <h1 class="loading">Loading...</h1>
             </div>
         );
     }
