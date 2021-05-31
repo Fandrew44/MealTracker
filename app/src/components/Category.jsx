@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from "framer-motion";
+import AppNav from './AppNav';
 
 function Category() {
     //STATES
@@ -16,31 +16,21 @@ function Category() {
     //useEffect is a React Hook to be used for side-effects executed in the Render LIFECYCLE
     // - An alternative to "componentDidMount()" for Functional Components
     // - By adding no State argument, the body will be executed upon rendering the Component
-    useEffect(() => {
-        loadCategories();
-    })
+    // useEffect(() => {
+    //     loadCategories();
+    // })
 
-    if (isLoading) {
-        return(
-            <div>
-                <h1 class="loading">Loading...</h1>
-            </div>
-        );
-    }
+    // if (isLoading) {
+    //     return(
+    //         <div>
+    //             <h1 class="loading">Loading...</h1>
+    //         </div>
+    //     );
+    // }
 
     return (
         <div>
-            <h1>
-                Categories:
-                {
-                    categories.map(category => {
-                        return(<div>
-                            <p>{ category.id }</p>
-                            <p>{ category.name }</p>
-                        </div>
-                    )})
-                }
-            </h1>
+            <AppNav navName="Categories"/>
         </div>
     );
 }

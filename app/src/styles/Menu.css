@@ -1,6 +1,3 @@
-:root {
-}
-
 .outermost-container {
   --backgroundColor: rgba(246, 241, 209);
   --colorShadeA: rgb(106, 163, 137);
@@ -90,4 +87,13 @@ button {
   transform: translate3d(0, 0, -1em);
 
   box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+}
+
+#categories {
+  top: 10rem;
+  left: -2.5rem;
+}
+
+#meals {
+  top: -2rem;
 }
