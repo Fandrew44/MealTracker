@@ -4,24 +4,29 @@ import { useHistory } from 'react-router-dom';
 
 //button animations inspired by https://codepen.io/ahart814/pen/yLNMZGa
 
+//NOTE: Seems like CSS styles persist to child components unless overwritten
+// e.g. food gif background 
+
+//PROBLEM: But when they're overwritten in the Child components, they're ALSO overwritten in the Parent components...
+
 function Menu() {
 
     const history = useHistory();
 
     return(
-        <div class="outermost-container">
+        <div className="outermost-container">
             <div>
-                <h2 class="title-div">
-                    <span class="meal">Meal</span><span class="tracker">Tracker</span>
+                <h2 className="title-div">
+                    <span className="meal">Meal</span><span className="tracker">Tracker</span>
                 </h2>
             </div>
-                <div class="button-container" id="categories" onClick={() => history.push('/categories')}>
-                    <button class = "start-button">
+                <div className="button-container" id="categories" onClick={() => history.push('/categories')}>
+                    <button className="start-button">
                         Categories
                     </button>
                 </div>
-                <div class="button-container" id="meals" onClick={() => history.push('/meals')}>
-                    <button class = "start-button">
+                <div className="button-container" id="meals" onClick={() => history.push('/meals')}>
+                    <button className="start-button">
                         Meals
                     </button>
                 </div>

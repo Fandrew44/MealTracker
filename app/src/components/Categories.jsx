@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AppNav from './AppNav';
 
-function Category() {
+function Categories() {
     //STATES
     const [isLoading, setIsLoading] = useState(true);
     const [categories, setCategories] = useState([]);
@@ -35,4 +35,4 @@ function Category() {
     );
 }
 
-export default Category;
+export default Categories;

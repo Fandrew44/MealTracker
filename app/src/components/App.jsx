@@ -1,7 +1,7 @@
 import React from 'react';
 import Menu from './Menu';
-import Meal from './Meal';
-import Category from './Category';
+import Meals from './Meals';
+import Categories from './Categories';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 //NOTE: The "render" attribute for the Route element is useful for adding inline rendering
@@ -14,8 +14,8 @@ function App() {
         <BrowserRouter>
             <Switch>
                 <Route exact path="/" component={Menu}></Route>
-                <Route exact path="/categories" component={Category}></Route>
-                <Route exact path="/meals" component={Meal}></Route>
+                <Route exact path="/categories" component={Categories}></Route>
+                <Route exact path="/meals" component={Meals}></Route>
             </Switch>
         </BrowserRouter>
     );

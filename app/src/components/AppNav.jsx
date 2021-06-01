@@ -15,9 +15,9 @@ function AppNav({ navName }) {
     }
 
     return(
-        <div class="navbar">
-            <h2 id="navName" class="nav-element">{navName}</h2>
-            <h2 class="nav-element menu-button" onClick={() => returnToMenu()}>Menu</h2>
+        <div className="navbar">
+            <h2 id="navName" className="nav-element">{navName}</h2>
+            <h2 className="nav-element menu-button" onClick={() => returnToMenu()}>Menu</h2>
         </div>
     );
 }
