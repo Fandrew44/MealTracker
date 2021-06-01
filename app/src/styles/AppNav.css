@@ -10,9 +10,13 @@
   left: 75%;
 }
 
+.menu-button:hover {
+  cursor: pointer;
+}
+
 #navName {
   position: relative;
-  left: 50%;
+  left: 46%;
   font-size: 200%;
   font-weight: 700;
 }
